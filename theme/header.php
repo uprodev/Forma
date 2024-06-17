@@ -67,30 +67,28 @@
         </div>
         <div class="wrap">
             <div class="logo-wrap">
-                <a href="index.html">
-                    <img src="img/logo.svg" alt="">
-                </a>
+                <?php if($logo):?>
+                    <a href="<?= get_home_url();?>">
+                        <img src="<?= $logo['url'];?>" alt="<?= $logo['alt'];?>">
+                    </a>
+                <?php endif;?>
             </div>
             <nav class="mob-menu-wrap">
-                <ul class="mob-menu">
-                    <li class="">
-                        <a href="construction.html">Sectors</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Construction</a></li>
-                            <li><a href="#">Culinary</a></li>
-                            <li><a href="#">Moulding</a></li>
-                            <li><a href="#">Products</a></li>
-                        </ul>
-                    </li>
+                <?php wp_nav_menu([
+                    'theme_location' => 'main-menu',
+                    'container' => false,
+                    'menu_class' => 'mob-menu',
+                ]);?>
 
-                    <li><a href="materials.html">Materials</a></li>
-                    <li><a href="about.html">About</a></li>
-
-                </ul>
-
-                <div class="btn-wrap">
-                    <a href="#" class="btn-head">Contact</a>
-                </div>
+                <?php if( $link ):
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <div class="btn-wrap">
+                        <a class="btn-head" href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>"><?= esc_html($link_title); ?></a>
+                    </div>
+                <?php endif; ?>
             </nav>
         </div>
     </div>
