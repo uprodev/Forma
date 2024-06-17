@@ -19,30 +19,35 @@
         <div class="top-line" >
             <div class="content-width" data-aos="fade-down"  data-aos-delay="500" data-aos-duration="1000">
                 <div class="logo-wrap">
-                    <a href="index.html">
-                        <img src="img/logo.svg" alt="">
-                    </a>
+                    <?php $logo = get_field('logo', 'options');
+
+                    if($logo):?>
+                        <a href="<?= get_home_url();?>">
+                            <img src="<?= $logo['url'];?>" alt="<?= $logo['alt'];?>">
+                        </a>
+                    <?php endif;?>
+
                 </div>
                 <nav class="top-menu">
-                    <ul class="menu">
-                        <li>
-                            <a href="construction.html">Sectors</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Construction</a></li>
-                                <li><a href="#">Culinary</a></li>
-                                <li><a href="#">Moulding</a></li>
-                                <li><a href="#">Products</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="materials.html">Materials</a></li>
-                        <li><a href="about.html">About</a></li>
-
-                    </ul>
+                    <?php wp_nav_menu([
+                        'theme_location' => 'main-menu',
+                        'container' => false,
+                        'menu_class' => 'menu',
+                    ]);?>
                 </nav>
-                <div class="btn-wrap">
-                    <a href="contact.html" class="btn-black">Contact us</a>
-                </div>
+
+                <?php $link = get_field('button', 'options');
+
+                if( $link ):
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <div class="btn-wrap">
+                        <a class="btn-black" href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>"><?= esc_html($link_title); ?></a>
+                    </div>
+                <?php endif; ?>
+
                 <div class="open-menu">
                     <a href="#">
                         <span></span>
