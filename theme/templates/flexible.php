@@ -14,107 +14,10 @@ $id = get_the_ID();
 
 <?php endif; ?>
 
-<section class="home-banner">
-    <div class="bg">
-        <img src="img/bg-1.jpg" alt="" class="bg-img">
-    </div>
-    <div class="content-width">
-        <div class="logo-head">
-            <img src="img/logo.svg" alt="">
-        </div>
-        <div class="content" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1000">
-            <div class="text">
-                <h1>Moulding today with technology of tomorrow</h1>
-                <p>Professional design, development & production solutions under one roof</p>
-            </div>
-            <div class="btn-wrap">
-                <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk?autoplay=1" class="btn-play">
-							<span class="icon-wrap">
-								<span class="bg-span"></span>
-								<img src="img/play.svg" alt="">
-							</span>
-                    <span class="text-wrap">
-								<span class="white">How it works</span>
-								<span class="grey">1:47</span>
-							</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="about">
-    <div class="content-width">
-        <div class="title-wrap" data-aos="fade-up" data-aos-duration="1000">
-            <h6 class="label">Our mission</h6>
-            <h2 class="title  title-black-1">We are making injection moulding more accessible by using cutting-edge technology.</h2>
-        </div>
-        <div class="text" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-            <p>With our state-of-the-art technology while also offering a cost-effective alternative to other names in the business. Our custom-built machines enable us to produce higher quality parts than our competitors with an unparalleled level of detail at a fraction of the cost.</p>
-        </div>
-        <div class="logo-wrap" >
-            <p>Some brands that trust us</p>
-            <div class='marquee marquee1'>
-                <div class="item"><img src="img/logo-1.svg" alt=""></div>
-                <div class="item"><img src="img/logo-2.svg" alt=""></div>
-                <div class="item"><img src="img/logo-3.svg" alt=""></div>
-                <div class="item"><img src="img/logo-4.svg" alt=""></div>
-                <div class="item"><img src="img/logo-5.svg" alt=""></div>
-                <div class="item"><img src="img/logo-6.svg" alt=""></div>
-                <div class="item"><img src="img/logo-1.svg" alt=""></div>
-                <div class="item"><img src="img/logo-2.svg" alt=""></div>
-                <div class="item"><img src="img/logo-3.svg" alt=""></div>
-                <div class="item"><img src="img/logo-4.svg" alt=""></div>
-                <div class="item"><img src="img/logo-5.svg" alt=""></div>
-                <div class="item"><img src="img/logo-6.svg" alt=""></div>
-            </div>
-        </div>
-    </div>
 
-</section>
 
-<section class="info-block black" data-aos="fade-up" data-aos-duration="1000">
-    <div class="content-width" >
-        <h6 class="label">Sectors</h6>
-        <h2 class="title title-white-1">Solutions moulded to you</h2>
 
-        <div class="content">
-            <div class="img-bg">
-                <div class="btn-wrap-play">
-                    <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk?autoplay=1" class="btn-play">
-							<span class="icon-wrap">
-								<span class="bg-span"></span>
-								<img src="img/play.svg" alt="">
-							</span>
-                        <span class="text-wrap">
-								<span class="white">How it works</span>
-								<span class="grey">1:47</span>
-							</span>
-                    </a>
-                </div>
-                <div class="bg">
-                    <img src="img/img-1.jpg" alt="">
-                </div>
-                <div class="wrap">
-                    <div class="text">
-                        <h5>‘Catering’ for your needs</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur. Tellus praesent dictumst in id eget bibendum quis magna viverra. Ultrices.</p>
-                        <div class="link-wrap">
-                            <a href="#" class="link">Discover more</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-wrap">
-                <a href="#" class="btn-border"><span>Construction</span></a>
-                <a href="#" class="btn-border"><span>Culinary</span></a>
-                <a href="#" class="btn-border"><span>Moulding</span></a>
-                <a href="#" class="btn-border"><span>Products</span></a>
-            </div>
-        </div>
-    </div>
-
-</section>
 
 <section class="services black">
     <div class="content-width">
