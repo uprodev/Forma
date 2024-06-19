@@ -19,65 +19,7 @@ $id = get_the_ID();
 
 
 
-<section class="services black">
-    <div class="content-width">
-        <div class="title-wrap">
-            <h6 class="label">Services</h6>
-            <h2 class="title title-white-2">Discover how we help you get the most from injection moulding</h2>
-        </div>
-        <div class="content " >
-            <div class="bg">
-                <img src="img/bg-2.png" alt="">
-            </div>
-            <div class="wrap rellax" data-rellax-speed="2">
-                <div class="item " >
-                    <figure>
-                        <a href="#">
-                            <img src="img/img-2-1.jpg" alt="">
-                        </a>
-                    </figure>
-                    <div class="text">
-                        <h6>Technical design & specification</h6>
-                        <p>Immersing ourselves in your vision & designing unique, eye-catching concepts to bring them to life</p>
-                        <div class="link-wrap">
-                            <a href="#" class="link">Discover more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item " >
-                    <figure>
-                        <a href="#">
-                            <img src="img/img-2-2.jpg" alt="">
-                        </a>
-                    </figure>
-                    <div class="text">
-                        <h6>Prototyping</h6>
-                        <p>Bridge the gap between concept & production by visualising, testing & refining your design before full-scale manufacturing</p>
-                        <div class="link-wrap">
-                            <a href="#" class="link">Discover more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item " >
-                    <figure>
-                        <a href="#">
-                            <img src="img/img-2-3.jpg" alt="">
-                        </a>
-                    </figure>
-                    <div class="text">
-                        <h6>Production</h6>
-                        <p>Combining state-of-the-art machinery and skilled artisans & engineers to bring your vision into reality</p>
-                        <div class="link-wrap">
-                            <a href="#" class="link">Discover more</a>
-                        </div>
-                    </div>
-                </div>
 
-
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="news" >
     <div class="content-width" data-aos="fade-up" data-aos-duration="1000">
