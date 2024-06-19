@@ -46,3 +46,19 @@ function my_acf_init() {
 add_action('acf/init', 'my_acf_init');
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+function cq_register_blocks() {
+    if( ! function_exists('acf_register_block') )
+        return;
+    acf_register_block( array(
+        'name'          => 'two_images',
+        'title'         => 'Two Images',
+        'render_template'   => 'parts/two-images.php',
+        'category'      => 'common',
+        'icon'          => 'format-gallery',
+        'mode'          => 'edit',
+        'keywords'      => array( 'profile', 'user', 'author' )
+    ));
+}
+add_action('acf/init', 'cq_register_blocks' );
