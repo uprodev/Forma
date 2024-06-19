@@ -4,6 +4,17 @@ get_header();
 
 $logo = get_field('logo', 'options');
 
+$ids = get_the_ID();
+
+$news = new WP_Query([
+    'post_type' => 'post',
+    'posts_per_page' => 3,
+    'post__not_in' => array($ids),
+]);
+
+$subtitle = get_field('subtitle_sp', 'options');
+$title = get_field('title_sp', 'options');
+
 ?>
 
 	<section class="home-banner news-banner-inner">
@@ -22,7 +33,7 @@ $logo = get_field('logo', 'options');
 			<div class="content" data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1000">
 				<div class="text">
 					<ul class="breadcrumb">
-						<li><a href="index.html">News</a><span>/</span> </li>
+						<li><a href="<?= get_permalink(125);?>"><?= get_the_title(125);?></a><span>/</span> </li>
 						<li><?php the_title();?></li>
 					</ul>
 					<h1><?php the_title();?></h1>
@@ -35,66 +46,35 @@ $logo = get_field('logo', 'options');
 	<section class="text-default">
 		<div class="content-width">
 			<div class="content">
-                
+
 				<?php the_content();?>
 
 			</div>
 		</div>
 	</section>
 
-	<section class="news" >
-		<div class="content-width" data-aos="fade-up" data-aos-duration="1000">
-			<h6 class="label">News</h6>
-			<h2 class="title title-black-2">Insights & industry news</h2>
-			<div class="content">
-				<div class="item">
-					<div class="wrap">
-						<div class="title-wrap">
-							<h6 class="title-item">Best smart wearables of 2023</h6>
-							<p class="date">10.03.24</p>
-						</div>
-						<div class="text-wrap">
-							<p>Lorem ipsum dolor sit amet consectetur. Sagittis aenean quis nulla volutpat molestie sed senectus. Vel amet sed ultricies quam id.</p>
-						</div>
-						<div class="link-wrap">
-							<a href="#" class="link">Read more</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="wrap">
-						<div class="title-wrap">
-							<h6 class="title-item">Gadget review: Release of new Airy Pods</h6>
-							<p class="date">10.03.24</p>
-						</div>
-						<div class="text-wrap">
-							<p>Lorem ipsum dolor sit amet consectetur. Sagittis aenean quis nulla volutpat molestie sed senectus. Vel amet sed ultricies quam id.</p>
-						</div>
-						<div class="link-wrap">
-							<a href="#" class="link">Read more</a>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="wrap">
-						<div class="title-wrap">
-							<h6 class="title-item">Long term benefits of clean energy sources</h6>
-							<p class="date">10.03.24</p>
-						</div>
-						<div class="text-wrap">
-							<p>Lorem ipsum dolor sit amet consectetur. Sagittis aenean quis nulla volutpat molestie sed senectus. Vel amet sed ultricies quam id.</p>
-						</div>
-						<div class="link-wrap">
-							<a href="#" class="link">Read more</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <?php if($news->have_posts()):?>
 
-<?php 
+        <section class="news">
+            <div class="content-width" data-aos="fade-up" data-aos-duration="1000">
+                <?php if($subtitle):?>
+                    <h6 class="label"><?= $subtitle;?></h6>
+                <?php endif;?>
+                <?php if($title):?>
+                    <h2 class="title title-black-2"><?= $title;?></h2>
+                <?php endif;?>
+                <div class="content">
 
-get_footer();
+                    <?php while($news->have_posts()): $news->the_post();
 
-?>
+                        get_template_part('parts/news');
+
+                    endwhile; wp_reset_postdata(); ?>
+
+                </div>
+            </div>
+        </section>
+
+    <?php endif;?>
+
+<?php get_footer();
