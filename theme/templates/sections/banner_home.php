@@ -19,7 +19,7 @@ $time_video = get_sub_field('time_video');
     <?php endif;?>
     <div class="content-width">
         <?php if($logo):?>
-        <div class="logo-head">
+            <div class="logo-head">
                 <img src="<?= $logo['url'];?>" alt="<?= $logo['alt'];?>">
             </div>
         <?php endif;?>
