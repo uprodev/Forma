@@ -188,10 +188,10 @@ jQuery(document).ready(function ($) {
 
       if (textPos < topOfWindow + 500) {
         $('.img-3d .item-1 .number span').animateNumber({
-          number: 1709
+          number: php_vars[0],
         },2500);
         $('.img-3d .item-2 .number span').animateNumber({
-          number: 32.1,
+          number: php_vars[1],
           numberStep: function(now, tween) {
             var target = $(tween.elem)
 
@@ -204,10 +204,10 @@ jQuery(document).ready(function ($) {
         },1000);
 
         $('.img-3d .item-3 .number span').animateNumber({
-          number: 609
+          number: php_vars[2],
         },3000);
         $('.img-3d .item-4 .number span').animateNumber({
-          number: 93
+          number: php_vars[3],
         },2000);
         $('.img-3d').addClass('stop');
       }

@@ -36,11 +36,22 @@ function add_scripts() {
     wp_enqueue_script( 'swiperjs', get_template_directory_uri() . '/js/swiper.js', array('jquery'), false, true);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), rand(1111, 9999), true);
 
-    wp_localize_script('script', 'globals',
-        array(
-            'url' => admin_url('admin-ajax.php'),
-            'template' => get_template_directory_uri(),
-        )
-    );
+//    wp_localize_script('script', 'globals',
+//        array(
+//            'url' => admin_url('admin-ajax.php'),
+//            'template' => get_template_directory_uri(),
+//        )
+//    );
 
+
+    $sections = get_field('content');
+    if($sections){
+        foreach ($sections as $section) {
+            if ($section['acf_fc_layout'] == 'image_with_numbers') {
+                $numbers = wp_list_pluck($section['numbers'], 'number');
+            }
+        }
+    }
+
+    wp_localize_script('script', 'php_vars', $numbers);
 }
