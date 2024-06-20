@@ -7,13 +7,14 @@ $link = get_sub_field('link');
 
 ?>
 
-<section class="home-banner sector-banner">
-    <?php if($img):?>
-        <div class="bg">
+<section class="home-banner sector-banner<?= $img?'':' materials-banner';?>">
+    <div class="bg">
+        <?php if($img):?>
             <img src="<?= $img['url'];?>" alt="<?= $img['alt'];?>" class="bg-img">
-            <img src="<?= get_template_directory_uri();?>/img/after-2.svg" alt="" class="after">
-        </div>
-    <?php endif;?>
+        <?php endif;?>
+        <img src="<?= get_template_directory_uri();?>/img/after-2.svg" alt="" class="after">
+    </div>
+
     <div class="content-width">
         <?php if($logo):?>
             <div class="logo-head">
