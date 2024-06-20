@@ -15,7 +15,7 @@
 
 <body <?php body_class() ?>>
 
-    <header<?= is_page_template('templates/contacts.php')?' class="no-anim header-contact"':'';?><?= is_singular('post')?' class="logo-black"':'';?>>
+    <header<?= is_page_template('templates/contacts.php')?' class="no-anim header-contact"':'';?><?= is_singular('post')?' class="logo-black"':'';?><?= is_home()?' class="logo-black no-anim"':'';?>>
         <div class="top-line">
             <div class="content-width" data-aos="fade-down"  data-aos-delay="500" data-aos-duration="1000">
                 <div class="logo-wrap">
