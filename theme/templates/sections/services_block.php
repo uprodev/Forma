@@ -3,11 +3,11 @@
 $subtitle = get_sub_field('subtitle');
 $title = get_sub_field('title');
 $services = get_sub_field('services');
-$img = get_sub_field('image');
+$count = get_sub_field('count_items');
 
 ?>
 
-<section class="services black">
+<section class="services<?= $count?' services-4x':'';?> black">
     <div class="content-width">
         <div class="title-wrap">
             <?php if($subtitle):?>
@@ -18,11 +18,9 @@ $img = get_sub_field('image');
             <?php endif;?>
         </div>
         <div class="content">
-            <?php if($img):?>
-                <div class="bg">
-                    <img src="<?= $img['url'];?>" alt="<?= $img['alt'];?>">
-                </div>
-            <?php endif;?>
+            <div class="bg">
+                <img src="<?= get_template_directory_uri();?>/img/bg-2.png" alt="">
+            </div>
 
             <?php if($services):?>
                 <div class="wrap rellax" data-rellax-speed="2">
