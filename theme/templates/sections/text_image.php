@@ -5,10 +5,11 @@ $title = get_sub_field('title');
 $text = get_sub_field('text');
 $img1 = get_sub_field('image_1');
 $img2 = get_sub_field('image_2');
+$bg = get_sub_field('bg');
 
 ?>
 
-<section class="img-text-white bg-black">
+<section class="img-text-white<?= $bg?'':' bg-black';?>">
     <div class="content-width">
         <div class="top">
             <div class="title-wrap">
