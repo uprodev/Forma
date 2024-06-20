@@ -35,13 +35,14 @@ function add_scripts() {
     wp_enqueue_script( 'fancyboxjs', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), false, true);
     wp_enqueue_script( 'swiperjs', get_template_directory_uri() . '/js/swiper.js', array('jquery'), false, true);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), rand(1111, 9999), true);
+    wp_enqueue_script( 'actions', get_template_directory_uri() . '/js/actions.js', array('jquery'), rand(1111, 9999), true);
 
-//    wp_localize_script('script', 'globals',
-//        array(
-//            'url' => admin_url('admin-ajax.php'),
-//            'template' => get_template_directory_uri(),
-//        )
-//    );
+    wp_localize_script('actions', 'globals',
+        array(
+            'url' => admin_url('admin-ajax.php'),
+            'template' => get_template_directory_uri(),
+        )
+    );
 
 
     $sections = get_field('content');
