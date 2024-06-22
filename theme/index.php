@@ -17,6 +17,8 @@ $first = new WP_Query([
 ]);
 
 while($first->have_posts()): $first->the_post();
+
+$im = get_field('card_image');
 ?>
 
     <section class="news-banner">
@@ -36,7 +38,7 @@ while($first->have_posts()): $first->the_post();
                     </div>
                 </div>
                 <figure>
-                    <img src="<?php the_post_thumbnail_url();?>" alt="">
+                    <img src="<?= $im?$im:get_the_post_thumbnail_url();?>" alt="">
                 </figure>
             </div>
         </div>

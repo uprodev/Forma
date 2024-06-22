@@ -1,7 +1,7 @@
 <?php
 
-$subtitle = get_sub_field('subtitle');
-$title = get_sub_field('title');
+$subtitle = get_sub_field('subtitle_sectors');
+$title_s = get_sub_field('title_sectors');
 $text = get_sub_field('text');
 $link = get_sub_field('link');
 $img = get_sub_field('image');
@@ -17,8 +17,8 @@ $buttons = get_sub_field('buttons');
         <?php if($subtitle):?>
             <h6 class="label"><?= $subtitle;?></h6>
         <?php endif;?>
-        <?php if($title):?>
-            <h2 class="title title-white-1"><?= $title;?></h2>
+        <?php if($title_s):?>
+            <h2 class="title title-white-1"><?= $title_s;?></h2>
         <?php endif;?>
 
         <div class="content">
