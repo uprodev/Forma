@@ -2,6 +2,7 @@
 
 $logo = get_field('logo', 'options');
 $img = get_sub_field('image');
+$image_above = get_sub_field('image_above');
 $title = get_sub_field('title');
 $link = get_sub_field('link');
 
@@ -12,7 +13,9 @@ $link = get_sub_field('link');
         <?php if($img):?>
             <img src="<?= $img['url'];?>" alt="<?= $img['alt'];?>" class="bg-img">
         <?php endif;?>
-        <img src="<?= get_template_directory_uri();?>/img/after-2.svg" alt="" class="after">
+        <?php if($image_above):?>
+            <img src="<?= $image_above['url'];?>" alt="<?= $image_above['alt'];?>" class="after">
+        <?php endif;?>
     </div>
 
     <div class="content-width">
